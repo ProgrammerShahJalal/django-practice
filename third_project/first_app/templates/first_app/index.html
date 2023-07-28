@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h2>Contact Page</h2>
+    <h2>Author name is {{ author }}</h2>
+
+    {% if marks >= 80 %}
+        <p>You got A+ </p>
+    {% elif marks >= 70 and marks <= 79 %}
+        <p>You got A</p>
+    {% elif marks >= 60 and marks <= 69 %}
+        <p>You got A-</p>
+    {% elif marks >= 50 and marks <= 59 %}
+        <p>You got B</p>
+    {% elif marks >= 40 and marks <= 49 %}
+        <p>You got C</p>
+    {% elif marks >= 33 and marks <= 39 %}
+        <p>You got D</p>
+    {% else %}
+        <p>You Failed. Never Give up.</p>
+    {% endif %}
+
+    <table border="1" width="500">
+        <tr>
+            <th>ID</th>
+            <th>Course</th>
+            <th>Teacher</th>
+        </tr>
+        {% for i in courses %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.course }}</td>
+            <td>{{ i.teacher }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+
+
+    <script src="" async defer></script>
+</body>
+</html>
