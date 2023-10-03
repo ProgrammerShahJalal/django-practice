@@ -43,7 +43,7 @@ class UserBankAccountUpdateView(View):
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            return redirect('profile')  # Redirect to the user's profile page
+            return redirect('profile')  
         return render(request, self.template_name, {'form': form})
     
     
